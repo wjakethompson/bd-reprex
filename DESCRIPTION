@@ -1,0 +1,7 @@
+Package: bdreprex
+Title: Minimal Bookdown Reprex
+Version: 0.0.0.9000
+Imports:
+  knitr,
+  bookdown,
+  rmarkdown
