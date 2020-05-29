@@ -10,7 +10,7 @@ link-citations: yes
 description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
 ---
 
-# Prerequisites
+# Prerequisites {.unlisted .unnumbered}
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
 
@@ -33,7 +33,7 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-```{js, echo = FALSE}
+```{js, eval = FALSE}
 title=document.getElementById('header');
 title.innerHTML = '<img src="https://cdn.pixabay.com/photo/2017/04/11/15/55/animals-2222007_960_720.jpg" alt="Test Image">' + title.innerHTML
 ```
