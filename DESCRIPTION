@@ -5,3 +5,6 @@ Imports:
   knitr,
   bookdown,
   rmarkdown
+Remotes:
+  rstudio/rmarkdown,
+  rstudio/bookdown
