@@ -1,8 +1,14 @@
 # Introduction {#intro}
 
+```{css, echo =  FALSE}
+.footnotes {
+  display: none;
+}
+```
+
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.^[Here is fancy footnote.]
 
 ```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
 par(mar = c(4, 4, .1, .1))
@@ -19,3 +25,15 @@ knitr::kable(
 ```
 
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+
+```{js, echo = FALSE, eval = TRUE}
+  var sup = document.getElementsByClassName("footnote-ref");
+    sup.onclick = function(event) {
+
+      var footnoteText = this.parentElement.parentElement.getElementsByClassName('footnotes');
+
+      footnoteText[0].style.display = 'block';
+
+      event.preventDefault();
+    };
+```
