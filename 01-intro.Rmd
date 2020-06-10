@@ -1,10 +1,9 @@
 # Introduction {#intro}
 
-```{css, echo =  FALSE,  eval = TRUE}
-.footnotes {
-  display: none;
-}
-```
+The [note] sign is historically equal to the asterisks used by Aristarchus of Samothrace at the Mouseion at Alexandria. It was used for the critical editions of Homer's writings where it "marked a verse incorrectly repeated in another passage" and was used together with other signs such as the obelus.^[[L.D. Reynolds and N.G. Wilson](). *Scribes and Scholars: A guide to the Transmission of Greek and Latin Literature*. Oxford University Press, 1991, 3rd edition, ISBN 0-19-872146-3, p. 10-11] The London printer Richard Jugge is generally credited as the inventor of the footnote, first used in the Bishops' Bible of 1568.^[Chuck Zerby, *[The Devil's Details: A History of Footnotes]()*, 2007, ISBN 1931229058, p. 28 and *passim*]
+
+Early printings of the Douay Bible used two closely spaced colons (actually squared four dot punctuation mark U+2E2C) to indicate a marginal note. (Source: [Wikipedia](https://en.wikipedia.org/wiki/Note_(typography)))
+
 
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
@@ -26,11 +25,11 @@ knitr::kable(
 
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
 
-```{js, echo = FALSE, eval = TRUE}
-  var sup = document.getElementsByClassName("footnote-ref");
+```{js, echo = FALSE, eval = FALSE}
+  var sup = document.getElementsByClassName("ss-1");
     sup.onclick = function(event) {
 
-      var footnoteText = this.parentElement.parentElement.getElementsByClassName('footnotes');
+      var footnoteText = this.parentElement.parentElement.getElementsByClassName('atlas-footnote-item');
 
       footnoteText[0].style.display = 'block';
 
