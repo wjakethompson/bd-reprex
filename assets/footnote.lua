@@ -22,7 +22,7 @@ function Note (note)
     pandoc.RawInline('html', fn_open),
     pandoc.Span(
       pandoc.utils.blocks_to_inlines(note.content),
-      pandoc.Attr(string.format('fn-%d-content', note_number))
+      pandoc.Attr(string.format('fn-content'))
     ),
     pandoc.RawInline('html', fn_close)
   }

@@ -12,3 +12,16 @@ pre {
 pre code {
   white-space: inherit;
 }
+
+label sup {
+  color: #4183c4;
+}
+
+#fn-content {
+  font-size: 80%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left:auto;
+  margin-right:auto;
+  width: 90%;
+}
