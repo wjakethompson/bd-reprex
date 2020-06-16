@@ -24,15 +24,3 @@ knitr::kable(
 ```
 
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
-
-```{js, echo = FALSE, eval = FALSE}
-  var sup = document.getElementsByClassName("ss-1");
-    sup.onclick = function(event) {
-
-      var footnoteText = this.parentElement.parentElement.getElementsByClassName('atlas-footnote-item');
-
-      footnoteText[0].style.display = 'block';
-
-      event.preventDefault();
-    };
-```
