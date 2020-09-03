@@ -1,3 +1,59 @@
-# Methods
+# Align multiple figures with `fig.align` {-}
 
-We describe our methods in this chapter.
+I have multiple figures that are output from a single code chunk. The goal is to have them appear next to each other, centered on the page. So far, I have been unable to make this happen. Here are some examples:
+
+This first chunk places two images side-by-side, and left-aligned on the page. The code results in 2 `<img>` tags without anything special, other than the specified width.
+
+````
+```{r test1, out.width='32.8%', fig.show='hold'}`r ''`
+knitr::include_graphics(rep('images/knit-logo.png', 2))
+```
+````
+
+```html
+<img src="images/knit-logo.png" width="32.8%" />
+<img src="images/knit-logo.png" width="32.8%" />
+```
+
+```{r test1, out.width='32.8%', fig.show='hold', echo = FALSE}
+knitr::include_graphics(rep('images/knit-logo.png', 2))
+```
+
+Now say I want the figures centered. So perhaps I try setting `fig.align='center'`. This center aligns the figures, but now they are no longer side-by-side. In the HTML output, we see that `style="display: block; margin: auto;"` has been added to the `<img>` tag.
+
+````
+```{r test2, out.width='32.8%', fig.show='hold', fig.align='center'}`r ''`
+knitr::include_graphics(rep('images/knit-logo.png', 2))
+```
+````
+
+```html
+<img src="images/knit-logo.png" width="32.8%" style="display: block; margin: auto;" />
+<img src="images/knit-logo.png" width="32.8%" style="display: block; margin: auto;" />
+```
+
+```{r test2, out.width='32.8%', fig.show='hold', fig.align='center', echo = FALSE}
+knitr::include_graphics(rep('images/knit-logo.png', 2))
+```
+
+Now if I add a figure caption, the images are side-by-side again, and centered. In the HTML, we can see that using a `fig.cap` places the images inside a `<div>`. The `div` is centered, but there is no "block" display that keeps the images from appearing on the same line.
+
+````
+```{r test3, out.width='32.8%', fig.show='hold', fig.align='center', fig.cap='A test caption.'}`r ''`
+knitr::include_graphics(rep('images/knit-logo.png', 2))
+```
+````
+
+```html
+<div class="figure" style="text-align: center">
+<img src="images/knit-logo.png" alt="A test caption." width="32.8%" />
+<img src="images/knit-logo.png" alt="A test caption." width="32.8%" />
+<p class="caption">(\#fig:test3-display)A test caption.</p>
+</div>
+```
+
+```{r test3, out.width='32.8%', fig.show='hold', fig.align='center', fig.cap='A test caption.', echo = FALSE}
+knitr::include_graphics(rep('images/knit-logo.png', 2))
+```
+
+
