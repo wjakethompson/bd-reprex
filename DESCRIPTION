@@ -4,7 +4,8 @@ Version: 0.0.0.9000
 Imports:
   knitr,
   bookdown,
-  rmarkdown
+  rmarkdown,
+  xfun
 Remotes:
   rstudio/rmarkdown,
   rstudio/bookdown
